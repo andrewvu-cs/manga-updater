@@ -5,12 +5,13 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 
-import re
+
 import time
 
 #I use mangadex.org as my choice of reading site
@@ -18,9 +19,9 @@ class mangabot(object):
     def __init__(self, mangas):
         self.manga_url = "https://www.mangadex.org"
         self.mangas = mangas
-        #Srapes on google chrome 
-        self.chromedriver = "/Users/andrewvu/Documents/chromedriver"
+        self.chromedriver = "/Users/andrewvu/Documents/chromedriver"                #Srapes on google chrome 
         self.myOptions = Options()
+        # self.myOptions.set_headless()
         self.driver = webdriver.Chrome(self.chromedriver, options = self.myOptions)
         self.driver.get(self.manga_url)
     
@@ -55,9 +56,9 @@ class mangabot(object):
             manga_chapter.click()
             time.sleep(3)
 
+            #Grabs the latest chapter
             chapter = self.driver.find_element_by_id("jump-chapter").text
-            print(chapter[0:15])
-            latest_chapters.append(chapter[0:15])
+            latest_chapters.append(chapter[0:6])
             chapter_urls.append(self.driver.current_url)
 
         return directory_urls, latest_chapters, chapter_urls
@@ -83,6 +84,3 @@ class mangabot(object):
         time.sleep(3)
 
        
-
-
-# search_items("Solo Leveling")
