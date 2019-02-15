@@ -7,12 +7,14 @@ MANGA UPDATER:
     - Retrieve Directory URL(respective name), Latest Chapter, and Chapter URL and populates the cells with info.
     
 What needs to be done(future):
+
     - Headless automation.
     - Need to learn how to automate a script to run daily to check for new chapters
         - Currently runs fine with head, but not headless
     - In lieu with point above, send e-mails about new chapters
 
 Project Timeline:
+
     - 2.15.19
         - Created email_alert.py
             - Connected to GMail servers to send emails when script is finished running
