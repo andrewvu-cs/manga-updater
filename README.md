@@ -1,17 +1,27 @@
 MANGA UPDATER:
-    
+    - For personal practice and use
+    - Using python
+    - Self-starter project, learning to use API's and python pkg Selenium
+    - Using Google Chrome
     - Will use www.mangadex.org as my preferred manga site
     - Program will be connected with Google Drive and Sheets API
     - It will update my sheets file on Google Drive with wanted info after feeding the sheet's data to the script
     - Feeds Manga Name
     - Retrieve Directory URL(respective name), Latest Chapter, and Chapter URL and populates the cells with info.
+
+PLEASE NOTE:
+    
+    - You will need to have chromedriver downloaded with it's path
+    - Install python package: Selenium
+    - Will need to make Gmail less secure 
+        - DISCLAIMER: DO AT YOUR OWN RISK!
     
 What needs to be done(future):
 
     - Headless automation.
     - Need to learn how to automate a script to run daily to check for new chapters
         - Currently runs fine with head, but not headless
-    - In lieu with point above, send e-mails about new chapters
+    - In lieu with point above, send e-mail notifications about new chapters
 
 Project Timeline:
 
