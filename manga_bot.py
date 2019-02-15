@@ -19,7 +19,7 @@ class mangabot(object):
     def __init__(self, mangas):
         self.manga_url = "https://www.mangadex.org"
         self.mangas = mangas
-        self.chromedriver = "/Users/andrewvu/Documents/chromedriver"                #Srapes on google chrome 
+        self.chromedriver = "YOUR PATH TO CHROMEDRIVER"     #path of chromedriver.exe
         self.myOptions = Options()
         # self.myOptions.set_headless()
         self.driver = webdriver.Chrome(self.chromedriver, options = self.myOptions)
