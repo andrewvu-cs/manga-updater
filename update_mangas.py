@@ -1,6 +1,7 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from manga_bot import mangabot
+from email_alert  import EmailAlert
 
 class MangaUpdater(object):
     def __init__(self, spreadsheet_name):
@@ -13,7 +14,7 @@ class MangaUpdater(object):
         'https://www.googleapis.com/auth/drive']
 
         #Include your JSON file
-        creds = ServiceAccountCredentials.from_json_keyfile_name('.....json', scope)
+        creds = ServiceAccountCredentials.from_json_keyfile_name('client.json', scope)
 
         client = gspread.authorize(creds)
 
@@ -32,6 +33,9 @@ class MangaUpdater(object):
             self.sheet.update_cell(i+2, self.chapter_url, chapter_urls[i])
     
 
-manga_updater = MangaUpdater("...") #INCLUDE YOUR SPREADSHEET NAME MADE ON GOOGLE DRIVE
+manga_updater = MangaUpdater("manga_chapters") #INCLUDE YOUR SPREADSHEET NAME MADE ON GOOGLE DRIVE
 manga_updater.process_manga_list()
+
+email = EmailAlert("Google Sheets Updated", "This is a messaget to let you know the spreadsheet has updated.")
+email.send_email()
 
