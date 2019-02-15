@@ -1,4 +1,5 @@
 MANGA UPDATER:
+
     - For personal practice and use
     - Using python
     - Self-starter project, learning to use API's and python pkg Selenium
