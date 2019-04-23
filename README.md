@@ -25,7 +25,7 @@ What needs to be done(future):
     - In lieu with point above, send e-mail notifications about new chapters
 
 Project Timeline:
-
+    - On a long hold due to copious amounts of schoolwork.
     - 2.15.19
         - Created email_alert.py
             - Connected to GMail servers to send emails when script is finished running
