@@ -1,3 +1,8 @@
+# Web scraper for manga chapter notifications!
+
+### 2.16.2020 
+Out of date. 
+
 MANGA UPDATER:
 
     - For personal practice and use
